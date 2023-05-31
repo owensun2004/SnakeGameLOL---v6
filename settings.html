@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game - Settings</title>
+    <link rel="stylesheet" href="setstyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="/Jquery library/jquery-3.6.4.min.js"></script>
+  </head>
+  <body>
+    <div id="setpage">
+    <button id="back" onclick="window.location.href = 'home.html';">
+      <i class="fa fa-angle-double-left"></i>
+      <span lang="es">&#160Retourner</span>
+      <span lang="en">&#160Back</span>
+      <span lang="z">&#160返回</span>
+    </button>
+    
+    <h1 id="settitle" class="grid-item">
+      <span lang="es">Paramètres</span>
+      <span lang="en">Settings</span>
+      <span lang="z">设计</span>
+    </h1>
+    <div id="langSelector" class="grid-item">
+      <label for="lang-switch">
+        <span lang="es">Lange:</span>
+        <span lang="en">Language:</span>
+        <span lang="z">语言:</span>
+      </label>
+      <select id="lang-switch">
+        <option value="sl">-----------</option>
+        <option value="en">English</option>
+        <option value="es">Français</option>
+        <option value="z">中文</option>
+      </select>
+    </div>
+    <div id="slide" class="grid-item">
+    <p><span lang="es">Changer la vitesse du serpent</span>
+      <span lang="en">Change Snake Speed</span>
+      <span lang="z">改变蛇的速度</span></p>
+
+    <div class="slidecontainer">
+        <input type="range" oninput="changeSpeed()" min="500" max="950" value="700" class="slider" id="myRange">
+    <p>
+      <span lang="es">La Vitesse: </span>
+      <span lang="en">Speed: </span>
+      <span lang="z">速度: </span>
+       <span id="demo"></span>
+    </p>
+    </div>
+  </div>
+  <div id="apple" class="grid-item">
+    <form>
+      <label for="fname">
+        <span lang="es">Entrez les nombreux de pommes:</span>
+        <span lang="en">Enter number of apples:</span>
+        <span lang="z">请输入苹果数量:</span>
+      </label><br>
+      <input type="number" id="fname" name="fname" value="1" min="1" max="20" oninput="pressBackApple()"><br>
+      <label for="lname">
+        <span lang="es">Entrez les nombreux de bombs:</span>
+        <span lang="en">Enter number of bombs:</span>
+        <span lang="z">请输入炸弹数量:</span>
+      </label><br>
+      <input type="number" id="lname" name="lname" value="0" min="0" max="10" oninput="pressBackBomb()">
+      
+    </form>
+  </div>
+  </div>
+    <script src="homescript.js"></script>
+    <script src="setscript.js"></script>
+  </body>
+</html>

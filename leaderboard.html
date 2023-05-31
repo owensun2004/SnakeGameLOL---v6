@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game - Leaderboards</title>
+    <link rel="stylesheet" href="leadstyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="/Jquery library/jquery-3.6.4.min.js"></script>
+  </head>
+  <body>
+    <div>
+      
+    <div class="container">
+      <button id="back" onclick="window.location.href = 'home.html';">
+        <i class="fa fa-angle-double-left"></i>
+        <span lang="es">&#160Retourner</span>
+        <span lang="en">&#160Back</span>
+        <span lang="z">&#160返回</span>
+      </button>
+      <h1 id="leadtit"><span lang="en">Leaderboards</span>
+        <span lang="es">Classements</span>
+        <span lang="z">排行榜</span></h1>
+        <div class="todo-app" id="todo">
+          <div id="header">
+          <h2 id="smttit"><span lang="en">Submit your score here </span>
+            <span lang="es">Soumettre votre score ici</span>
+            <span lang="z">请在此处提交您的分数</span></h2>
+          <button id="close-but" onclick="XclosePopUp()">&times</button>
+        </div>
+          <br>
+          <p id="subheader"><span lang="en">Enter Name: </span>
+            <span lang="es">Entrer Nom:</span>
+            <span lang="z">请输入名字：</span></p>
+          <input type="text" id="item">
+          <br>
+          <br>
+          <div id="opbut">
+          <button onclick="add()" id="addbut"><span lang="en">Add Item </span>
+            <span lang="es">Ajouter Porjets</span>
+            <span lang="z">添加名字和分数</span> <i class="fa-solid fa-plus"></i></button>
+        </div>
+        </div>
+        <div>
+        <p id="reftit">&#160<span lang="en">Player Name</span>
+          <span lang="es">Nom de joueur</span>
+          <span lang="z">玩家名字</span>&emsp;&emsp;&emsp;&emsp;&#160&#160<span lang="es">Score</span>
+          <span lang="en">Score</span>
+          <span lang="z">分数</span></p>
+        <ul class="to-do-list" id="id01">
+        </ul>
+        <button onclick="del()" id="clearing">
+          <span lang="es">Tout clear</span>
+        <span lang="en">Clear All</span>
+        <span lang="z">删除所以分数</span> <i class="fa-solid fa-ban"></i></button>
+      </div>
+      </div>
+      
+    </div>
+    <div id="overlay"></div>
+    <script src="homescript.js"></script>
+    <script src="leadscript.js"></script>
+  </body>
+</html>

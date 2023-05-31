@@ -1,0 +1,262 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+    background: #2ecc71;
+  background-image: linear-gradient(to top left, #2980b9, #16a085, #2ecc71);
+  }
+
+.playing{
+  display: grid;
+  grid-template-columns: auto auto auto auto ;
+  font-size: 20px;
+}
+#board{
+  border: 25px solid black;
+  grid-column-start: 1;
+  grid-column-end: 7;
+}
+#scoring{
+  display: flex;
+  font-size: x-large;
+  font-weight: bolder;
+  padding:5px;
+  margin:10px;
+  border:10px solid black;
+  background-color: grey;
+  justify-content: space-around;
+  position:relative;
+  left: 140px;
+}
+
+
+#back{
+  border-radius: 4px;
+      background-color: rgb(185, 185, 185);
+      border: 2px solid black;
+      color: #000000;
+      text-align: center;
+      font-size: 28px;
+      width: 150px;transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+    
+}
+
+#back:hover{
+  background-color: #505050; /* Green */
+      color: white;
+}
+#back:active{
+  background-color: #292929;
+  transform: scale(0.95, 0.95);
+}
+
+.popup{
+  display:grid;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-10%, -120%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width: 450px;
+  max-width: 80%;
+}
+.popup2{
+  transform: translate(-55%, -120%) scale(0);
+}
+.open-popup{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.header{
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+#tit{
+  font-size: 2rem;
+  font-weight: bolder;
+  position:relative;
+  left:140px;
+}
+
+#close-but{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+#close-but:hover{
+  background-color: red;
+  color:white;
+}
+#close-but:active{
+  background-color: rgb(155, 2, 2);
+}
+.scoreboard{
+  
+  display: flex;
+  position:relative;
+  left:170px;
+  font-size:1.5rem;
+  font-weight: bold;
+  gap:10px;
+}
+#somestat{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+#statTitle{
+  font-weight: bold;
+  text-align: center;
+}
+#more{
+  display:none;
+  position:relative;
+  left:120px;
+}
+#showmore{
+  position:relative;
+  left:160px;
+  border-radius: 10px;
+  background-color: #a8a8a8;
+  border: 2px solid black;
+  color: white;
+  text-align: center;
+  font-size: large;
+  padding: 5px;
+  width: 120px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+#showmore:hover{
+  background-color: #888888;;
+}
+#showmore:active{
+  background-color: #696969;
+  transform: scale(0.95, 0.95);
+}
+.footer{
+  padding: 10px 15px;
+  display: flex;
+}
+#leader{
+  border-radius: 10px;
+  background-color: #21a6ff;
+  border: 2px solid black;
+  color: white;
+  text-align: center;
+  font-size: large;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+#leader:hover{
+  background-color: #2d6fff;;
+}
+#leader:active{
+  background-color: #1c03ff;
+  transform: scale(0.95, 0.95);
+}
+
+#leader.cont{
+  background-color:yellow;
+}
+#leader.cont:hover{
+  background-color: #aeff00;;
+}
+#leader.cont:active{
+  background-color: #51ff00;
+  transform: scale(0.95, 0.95);
+}
+
+.restart{
+  border-radius: 10px;
+background-color: #32fd3c;
+border: 2px solid black;
+color: white;
+text-align: center;
+font-size: larger;
+padding: 10px;
+width: 200px;
+transition: all 0.5s;
+cursor: pointer;
+margin: 5px;
+}
+.restart:hover{
+  background-color: rgb(2, 209, 71);
+}
+.restart:active{
+  background-color: rgb(2, 145, 102);
+  transform: scale(0.95, 0.95);
+}
+
+#pause{
+  visibility: visible;
+  border-radius: 10px;
+  background-color: #b31e1e;
+  border: 2px solid black;
+  color: black;
+  text-align: center;
+  font-size: larger;
+  padding: 10px;
+  width: 130px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+#pause.acti{
+  visibility: hidden;
+}
+
+#stats{
+  visibility: hidden;
+  border-radius: 10px;
+  background-color: #40f7ab;
+  border: 2px solid black;
+  color: white;
+  text-align: center;
+  font-size: larger;
+  padding: 10px;
+  width: 170px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#stats.act{
+  visibility: visible;
+}
+
